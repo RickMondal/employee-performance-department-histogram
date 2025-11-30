@@ -46,6 +46,7 @@ def main(csv_path: str = "employees.csv", html_path: str = "analysis.html") -> N
   <h1>Department Mix Overview</h1>
   <p class=\"metric\">IT department employee count: <strong>{it_count}</strong></p>
   <p class=\"metric\">Dataset records analyzed: <strong>{len(data)}</strong></p>
+  <p class=\"metric\">Analyst contact: <a href=\"mailto:23f2000340@ds.study.iitm.ac.in\">23f2000340@ds.study.iitm.ac.in</a></p>
   <img src=\"{figure_path}\" alt=\"Histogram of employee counts per department\">
 </body>
 </html>
