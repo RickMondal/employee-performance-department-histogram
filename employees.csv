@@ -1,0 +1,101 @@
+employee_id,department,region,performance_score,years_experience,satisfaction_rating
+EMP001,HR,North America,77.68,5,4.5
+EMP002,Marketing,Africa,72.01,3,4.2
+EMP003,R&D,North America,79.86,1,4.1
+EMP004,Marketing,Middle East,87.31,18,3.8
+EMP005,IT,Asia Pacific,82.33,6,4.4
+EMP006,IT,Europe,81.15,7,4.9
+EMP007,IT,North America,76.5,12,4.2
+EMP008,Operations,Middle East,83.17,15,4.1
+EMP009,Customer Success,Latin America,83.86,20,4.8
+EMP010,IT,Europe,85.17,3,3.1
+EMP011,Finance,Asia Pacific,93.66,4,3.8
+EMP012,IT,Asia Pacific,80.54,6,3.7
+EMP013,Finance,Asia Pacific,74.38,3,4.2
+EMP014,R&D,Middle East,66.42,8,3.3
+EMP015,IT,Middle East,79.87,11,4.7
+EMP016,Marketing,Europe,72.79,2,4.6
+EMP017,IT,North America,86.65,11,3.4
+EMP018,IT,Middle East,100.57,15,3.3
+EMP019,R&D,Middle East,72.21,19,3.9
+EMP020,HR,Asia Pacific,75.65,8,5.0
+EMP021,R&D,Latin America,80.09,4,3.3
+EMP022,R&D,Middle East,79.34,14,4.2
+EMP023,IT,Africa,91.82,18,4.7
+EMP024,R&D,Middle East,77.76,4,4.4
+EMP025,HR,Asia Pacific,78.85,10,3.9
+EMP026,IT,Middle East,74.75,9,4.9
+EMP027,Marketing,Africa,91.8,10,4.7
+EMP028,IT,Europe,73.56,5,3.7
+EMP029,R&D,Africa,87.43,16,3.0
+EMP030,Customer Success,Asia Pacific,72.7,8,3.1
+EMP031,Operations,North America,85.92,3,5.0
+EMP032,HR,Europe,82.73,5,4.3
+EMP033,Customer Success,Europe,76.47,14,4.9
+EMP034,Customer Success,Middle East,94.16,7,4.4
+EMP035,IT,Middle East,76.95,17,3.9
+EMP036,Finance,North America,71.05,11,3.0
+EMP037,HR,Africa,78.57,2,3.5
+EMP038,Operations,Asia Pacific,81.02,3,4.0
+EMP039,Finance,Latin America,78.95,19,4.2
+EMP040,Finance,Latin America,82.16,14,3.4
+EMP041,R&D,Latin America,72.98,2,4.3
+EMP042,Customer Success,North America,84.53,2,3.8
+EMP043,IT,North America,82.04,15,3.3
+EMP044,Finance,Latin America,83.2,8,4.7
+EMP045,R&D,Africa,87.49,18,4.7
+EMP046,Customer Success,Europe,84.71,6,3.8
+EMP047,IT,Latin America,85.92,1,5.0
+EMP048,Finance,Latin America,75.24,10,3.8
+EMP049,Customer Success,Africa,73.14,7,3.6
+EMP050,Customer Success,Africa,70.14,18,3.1
+EMP051,Finance,North America,69.83,17,3.3
+EMP052,Customer Success,North America,73.23,6,3.1
+EMP053,R&D,Europe,62.31,19,3.5
+EMP054,HR,Africa,88.84,3,3.8
+EMP055,HR,Africa,75.48,11,3.5
+EMP056,IT,Middle East,87.69,10,3.9
+EMP057,Customer Success,North America,89.13,19,5.0
+EMP058,R&D,Europe,78.65,17,3.5
+EMP059,Customer Success,North America,83.58,6,3.9
+EMP060,HR,Asia Pacific,72.71,20,5.0
+EMP061,Operations,Africa,92.73,10,4.9
+EMP062,R&D,Europe,78.72,9,3.2
+EMP063,R&D,Africa,81.64,7,4.4
+EMP064,Finance,Middle East,83.39,9,4.0
+EMP065,Finance,North America,85.02,9,3.1
+EMP066,IT,Europe,86.6,9,3.3
+EMP067,IT,Middle East,81.0,3,4.9
+EMP068,Marketing,Europe,78.49,18,3.1
+EMP069,IT,Africa,84.5,10,3.7
+EMP070,Customer Success,North America,81.35,12,3.4
+EMP071,Finance,North America,71.79,14,4.9
+EMP072,Marketing,Europe,86.15,6,5.0
+EMP073,Operations,Latin America,90.91,11,4.6
+EMP074,IT,Middle East,84.03,8,3.5
+EMP075,Marketing,North America,76.34,16,3.4
+EMP076,Operations,Latin America,79.51,12,3.6
+EMP077,Marketing,Europe,79.99,13,3.7
+EMP078,Operations,Asia Pacific,89.58,12,4.3
+EMP079,IT,Africa,81.08,9,3.4
+EMP080,Customer Success,Asia Pacific,79.65,2,3.2
+EMP081,IT,Middle East,83.94,17,3.2
+EMP082,Operations,Europe,69.66,9,3.1
+EMP083,IT,Africa,90.88,7,3.7
+EMP084,R&D,Middle East,73.52,11,4.2
+EMP085,Marketing,North America,76.72,10,4.3
+EMP086,Finance,Middle East,71.36,10,4.1
+EMP087,Finance,Middle East,89.2,6,4.2
+EMP088,Finance,Africa,73.6,1,3.6
+EMP089,Finance,Africa,72.47,15,3.9
+EMP090,Finance,Latin America,73.62,6,4.3
+EMP091,Finance,Middle East,73.15,8,4.3
+EMP092,Finance,Europe,72.64,5,3.0
+EMP093,Finance,Latin America,67.53,15,3.8
+EMP094,HR,Europe,69.19,13,4.0
+EMP095,Finance,Middle East,71.54,4,4.6
+EMP096,Finance,Middle East,62.38,17,3.9
+EMP097,HR,North America,64.15,17,5.0
+EMP098,HR,Latin America,81.89,20,4.6
+EMP099,Operations,Latin America,82.89,6,4.5
+EMP100,IT,Asia Pacific,73.18,8,4.7
