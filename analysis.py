@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 def main(csv_path: str = "employees.csv", html_path: str = "analysis.html") -> None:
     data = pd.read_csv(csv_path)
 
-    it_count = (data["department"].str.upper() == "IT").sum()
+    it_count = int((data["department"].str.upper() == "IT").sum())
     print(f"IT department count: {it_count}")
 
     sns.set_theme(style="whitegrid", context="talk")
