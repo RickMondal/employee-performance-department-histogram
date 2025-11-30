@@ -9,6 +9,8 @@
     h1 { color: #1d4ed8; }
     .metric { margin-top: 1.5rem; font-size: 1.1rem; }
     img { margin-top: 1.5rem; max-width: 100%; height: auto; border: 1px solid #cbd5f5; box-shadow: 0 2px 6px rgba(15,23,42,0.15); }
+    pre { background: #0f172a; color: #f8fafc; padding: 1rem; border-radius: 6px; overflow-x: auto; }
+    code { font-family: 'Fira Code', 'Consolas', 'Courier New', monospace; font-size: 0.9rem; line-height: 1.4; }
   </style>
 </head>
 <body>
@@ -17,5 +19,77 @@
   <p class="metric">Dataset records analyzed: <strong>100</strong></p>
   <p class="metric">Analyst contact: <a href="mailto:23f2000340@ds.study.iitm.ac.in">23f2000340@ds.study.iitm.ac.in</a></p>
   <img src="department_histogram.png" alt="Histogram of employee counts per department">
+  <h2>Python Script</h2>
+  <pre><code class="language-python">import html
+from pathlib import Path
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Analyst contact: 23f2000340@ds.study.iitm.ac.in
+
+def main(csv_path: str = &quot;employees.csv&quot;, html_path: str = &quot;analysis.html&quot;) -&gt; None:
+    data = pd.read_csv(csv_path)
+
+    it_count = int((data[&quot;department&quot;].str.upper() == &quot;IT&quot;).sum())
+    print(f&quot;IT department count: {it_count}&quot;)
+
+    sns.set_theme(style=&quot;whitegrid&quot;, context=&quot;talk&quot;)
+    plt.figure(figsize=(10, 6))
+    ax = sns.histplot(
+        data=data,
+        x=&quot;department&quot;,
+        discrete=True,
+        shrink=0.8,
+        color=&quot;#1f77b4&quot;,
+        edgecolor=&quot;#16213e&quot;,
+    )
+    ax.set_title(&quot;Employee Distribution by Department&quot;, fontsize=20, pad=18)
+    ax.set_xlabel(&quot;Department&quot;, fontsize=14)
+    ax.set_ylabel(&quot;Number of Employees&quot;, fontsize=14)
+    plt.xticks(rotation=25, ha=&quot;right&quot;)
+    plt.tight_layout()
+
+    figure_path = &quot;department_histogram.png&quot;
+    plt.savefig(figure_path, dpi=120)
+
+    source_code = Path(__file__).read_text(encoding=&quot;utf-8&quot;)
+    escaped_code = html.escape(source_code)
+
+    html_content = f&quot;&quot;&quot;
+&lt;!DOCTYPE html&gt;
+&lt;html lang=\&quot;en\&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=\&quot;utf-8\&quot;&gt;
+  &lt;title&gt;Employee Performance Distribution&lt;/title&gt;
+  &lt;style&gt;
+    body {{ font-family: &#x27;Segoe UI&#x27;, Arial, sans-serif; margin: 2rem; background: #f8fafc; color: #0f172a; }}
+    h1 {{ color: #1d4ed8; }}
+    .metric {{ margin-top: 1.5rem; font-size: 1.1rem; }}
+    img {{ margin-top: 1.5rem; max-width: 100%; height: auto; border: 1px solid #cbd5f5; box-shadow: 0 2px 6px rgba(15,23,42,0.15); }}
+    pre {{ background: #0f172a; color: #f8fafc; padding: 1rem; border-radius: 6px; overflow-x: auto; }}
+    code {{ font-family: &#x27;Fira Code&#x27;, &#x27;Consolas&#x27;, &#x27;Courier New&#x27;, monospace; font-size: 0.9rem; line-height: 1.4; }}
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Department Mix Overview&lt;/h1&gt;
+  &lt;p class=\&quot;metric\&quot;&gt;IT department employee count: &lt;strong&gt;{it_count}&lt;/strong&gt;&lt;/p&gt;
+  &lt;p class=\&quot;metric\&quot;&gt;Dataset records analyzed: &lt;strong&gt;{len(data)}&lt;/strong&gt;&lt;/p&gt;
+  &lt;p class=\&quot;metric\&quot;&gt;Analyst contact: &lt;a href=\&quot;mailto:23f2000340@ds.study.iitm.ac.in\&quot;&gt;23f2000340@ds.study.iitm.ac.in&lt;/a&gt;&lt;/p&gt;
+  &lt;img src=\&quot;{figure_path}\&quot; alt=\&quot;Histogram of employee counts per department\&quot;&gt;
+  &lt;h2&gt;Python Script&lt;/h2&gt;
+  &lt;pre&gt;&lt;code class=\&quot;language-python\&quot;&gt;{escaped_code}&lt;/code&gt;&lt;/pre&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&quot;&quot;&quot;
+
+    with open(html_path, &quot;w&quot;, encoding=&quot;utf-8&quot;) as f:
+        f.write(html_content)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
 </body>
 </html>

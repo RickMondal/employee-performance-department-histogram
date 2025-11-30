@@ -1,3 +1,6 @@
+import html
+from pathlib import Path
+
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -29,6 +32,9 @@ def main(csv_path: str = "employees.csv", html_path: str = "analysis.html") -> N
     figure_path = "department_histogram.png"
     plt.savefig(figure_path, dpi=120)
 
+    source_code = Path(__file__).read_text(encoding="utf-8")
+    escaped_code = html.escape(source_code)
+
     html_content = f"""
 <!DOCTYPE html>
 <html lang=\"en\">
@@ -40,6 +46,8 @@ def main(csv_path: str = "employees.csv", html_path: str = "analysis.html") -> N
     h1 {{ color: #1d4ed8; }}
     .metric {{ margin-top: 1.5rem; font-size: 1.1rem; }}
     img {{ margin-top: 1.5rem; max-width: 100%; height: auto; border: 1px solid #cbd5f5; box-shadow: 0 2px 6px rgba(15,23,42,0.15); }}
+    pre {{ background: #0f172a; color: #f8fafc; padding: 1rem; border-radius: 6px; overflow-x: auto; }}
+    code {{ font-family: 'Fira Code', 'Consolas', 'Courier New', monospace; font-size: 0.9rem; line-height: 1.4; }}
   </style>
 </head>
 <body>
@@ -48,6 +56,8 @@ def main(csv_path: str = "employees.csv", html_path: str = "analysis.html") -> N
   <p class=\"metric\">Dataset records analyzed: <strong>{len(data)}</strong></p>
   <p class=\"metric\">Analyst contact: <a href=\"mailto:23f2000340@ds.study.iitm.ac.in\">23f2000340@ds.study.iitm.ac.in</a></p>
   <img src=\"{figure_path}\" alt=\"Histogram of employee counts per department\">
+  <h2>Python Script</h2>
+  <pre><code class=\"language-python\">{escaped_code}</code></pre>
 </body>
 </html>
 """
